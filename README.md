@@ -12,7 +12,7 @@ To get started with this project, follow these steps:
 5. Run `npm run dev` to start the web server.
 
 ## Live Link
-[Live Link](https://cine-sphere-rust.vercel.app/)
+[Live Link](https://play-oasis.vercel.app/)
 
 ## Technologies Used
 - HTML
