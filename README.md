@@ -7,7 +7,7 @@ To get started with this project, follow these steps:
 
 1. Clone this repository to your local machine.
 2. Install the required dependencies.
-   ```bash
+```bash
    npm install
    ```
 4. Get a RAWG API key at https://rawg.io/apidocs. You'll have to create an account first.
