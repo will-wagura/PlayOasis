@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 import {
   Box,
   Button,
@@ -8,23 +8,30 @@ import {
   Stack,
   Card,
   CardBody,
-} from "@chakra-ui/react";
+  Center,
+} from '@chakra-ui/react';
+import Logo from "../assets/logo.webp"
 
 const Signup = () => {
-  const [firstName, setFirstName] = useState("");
-  const [lastName, setLastName] = useState("");
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [firstName, setFirstName] = useState('');
+  const [lastName, setLastName] = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
 
   const handleSubmit = (event) => {
     event.preventDefault();
     // Add your signup logic here
-    console.log("Signup button clicked!");
+    console.log('Signup button clicked!');
+    console.log('First Name:', firstName);
+    console.log('Last Name:', lastName);
+    console.log('Email:', email);
+    console.log('Password:', password);
   };
 
   return (
     <Box p={4}>
-      <Card boxShadow="lg" rounded="md">
+    <Center>
+      <Card bgGradient="linear(to-tr, green.200, green.500)" boxShadow="lg" rounded="md">
         <CardBody>
           <form onSubmit={handleSubmit}>
             <Stack spacing={4}>
@@ -46,7 +53,7 @@ const Signup = () => {
                   placeholder="Enter your last name"
                 />
               </FormControl>
-              <FormControl id="email" isRequired>
+              <FormControl id="email">
                 <FormLabel>Email address</FormLabel>
                 <Input
                   type="email"
@@ -55,8 +62,8 @@ const Signup = () => {
                   placeholder="Enter your email"
                 />
               </FormControl>
-              <FormControl id="password" isRequired>
-                <FormLabel>Create New Password</FormLabel>
+              <FormControl id="password">
+                <FormLabel>Password</FormLabel>
                 <Input
                   type="password"
                   value={password}
@@ -64,13 +71,12 @@ const Signup = () => {
                   placeholder="Enter your password"
                 />
               </FormControl>
-              <Button type="submit" colorScheme="green">
-                Sign Up
-              </Button>
+              <Button type="submit" colorScheme="green">Sign Up</Button>
             </Stack>
           </form>
         </CardBody>
       </Card>
+      </Center>
     </Box>
   );
 };

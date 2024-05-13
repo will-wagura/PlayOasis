@@ -10,18 +10,11 @@ const NavBar = ({ onSearch }) => {
     console.log("Navigate to login page");
   };
 
-  const handleSignupClick = (e) => {
-    e.preventDefault();
-    // Add logic to handle signup navigation
-    console.log("Navigate to signup page");
-  };
-
-    return (<HStack padding="10px">
+    return (<HStack padding="10px" justify="space-between">
       <Image src={logo} boxSize="60px" width="80px"/>
       <SearchInput onSearch={onSearch}/>
 
       <a href="/login" onClick={handleLoginClick}>Login</a>
-      <a href="/signup" onClick={handleSignupClick}>Sign Up</a>
 
       <ColorModeSwitch />
     </HStack>);

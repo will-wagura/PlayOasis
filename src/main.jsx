@@ -5,29 +5,27 @@ import { ChakraProvider, ColorModeScript } from '@chakra-ui/react';
 import App from './App';
 import theme from './theme';
 import Login from './components/Login';
-import Signup from './components/Signup';
-import NavBar from './components/NavBar';
 import './index.css';
 
 const router = createBrowserRouter([
   {
-    path: '/login',
-    element: <Login />
+    path: "/",
+    element: <App />
   },
   {
-    path: '/signup',
-    element: <Signup />
+    path: '/login',
+    element: <Login />
   },
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router={router}>
-      <ChakraProvider theme={theme}>
-        <ColorModeScript initialColorMode={theme.config.initialColorMode}/>
-        <NavBar />
+    <ChakraProvider theme={theme}>
+      <ColorModeScript initialColorMode={theme.config.initialColorMode}/>
+      <RouterProvider router={router}>
         <App />
-      </ChakraProvider>
-    </RouterProvider>
+        <Login />
+      </RouterProvider>
+    </ChakraProvider>
   </React.StrictMode>
 );

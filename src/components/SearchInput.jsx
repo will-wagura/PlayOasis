@@ -8,7 +8,7 @@ const SearchInput = ({ onSearch }) => {
             if (ref.current)
                 onSearch(ref.current.value);
         }}>
-      <InputGroup>
+      <InputGroup >
         <InputLeftElement children={<BsSearch />}/>
         <Input ref={ref} borderRadius={20} placeholder="Search games..." variant="filled"/>
       </InputGroup>
