@@ -6,6 +6,7 @@ import App from './App';
 import theme from './theme';
 import Login from './components/Login';
 import Signup from './components/Signup';
+import NavBar from './components/NavBar';
 import './index.css';
 
 const router = createBrowserRouter([
@@ -24,6 +25,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <RouterProvider router={router}>
       <ChakraProvider theme={theme}>
         <ColorModeScript initialColorMode={theme.config.initialColorMode}/>
+        <NavBar />
         <App />
       </ChakraProvider>
     </RouterProvider>

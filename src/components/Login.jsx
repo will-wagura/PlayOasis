@@ -1,55 +1,58 @@
-import React, { useState } from 'react';
-import {
-  Box,
-  Button,
-  FormControl,
-  FormLabel,
-  Input,
-  Stack,
-  Card,
-  CardBody,
-} from '@chakra-ui/react';
+import React, { useState } from "react";
+import Logo from "../assets/logo.webp";
 
 const Login = () => {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    // Add your login logic here
-    console.log('Login button clicked!');
-  };
-
-  return (
-    <Box p={4}>
-      <Card boxShadow="lg" rounded="md">
-        <CardBody>
-          <form onSubmit={handleSubmit}>
-            <Stack spacing={4}>
-              <FormControl id="email">
-                <FormLabel>Email address</FormLabel>
-                <Input
-                  type="email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  placeholder="Enter your email"
+return (
+    <>
+    <section className="image-section">
+        <div className="flex items-center justify-center bg-neutral-800 h-screen ">
+          <div className="w-11/12 md:w-2/3 lg:w-1/2 xl:w-1/3 shadow-lg bg-neutral-900 rounded-lg overflow-hidden px-8 pt-6 pb-8 mb-4">
+          <img src={Logo} alt="Logo" className="h-14 w-auto " />
+            <form>
+              <div className="mb-4">
+                <label
+                  className="block text-white  text-sm font-bold mb-2"
+                  htmlFor="username"
+                >
+                  Username
+                </label>
+                <input
+                  className="shadow appearance-none border rounded-xl w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                  id="username"
+                  type="text"
+                  placeholder="Your Username"
+                  required
                 />
-              </FormControl>
-              <FormControl id="password">
-                <FormLabel>Password</FormLabel>
-                <Input
+              </div>
+              <div className="mb-6">
+                <label
+                  className="block text-white text-sm font-bold mb-2"
+                  htmlFor="password"
+                >
+                  Password
+                </label>
+                <input
+                  className="shadow appearance-none border rounded-xl w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                  id="password"
                   type="password"
-                  value={password}
-                  onChange={(e) => setPassword(e.target.value)}
-                  placeholder="Enter your password"
+                  placeholder="Your Password"
+                  required
                 />
-              </FormControl>
-              <Button type="submit" colorScheme="blue">Login</Button>
-            </Stack>
-          </form>
-        </CardBody>
-      </Card>
-    </Box>
+              </div>
+              <div className="flex items-center justify-between text-center">
+                <button
+                  className="ml-40 rounded-lg text-white bg-black font-bold py-2 px-4 transition ease-in-out hover:-translate-y-1 hover:scale-110  duration-300 focus:outline-none focus:shadow-outline"
+                  type="submit"
+                >
+                  Log In
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+    </section>
+    </>
   );
 };
 

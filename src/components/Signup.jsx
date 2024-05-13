@@ -46,7 +46,7 @@ const Signup = () => {
                   placeholder="Enter your last name"
                 />
               </FormControl>
-              <FormControl id="email">
+              <FormControl id="email" isRequired>
                 <FormLabel>Email address</FormLabel>
                 <Input
                   type="email"
@@ -55,7 +55,7 @@ const Signup = () => {
                   placeholder="Enter your email"
                 />
               </FormControl>
-              <FormControl id="password">
+              <FormControl id="password" isRequired>
                 <FormLabel>Create New Password</FormLabel>
                 <Input
                   type="password"
