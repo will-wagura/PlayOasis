@@ -6,10 +6,16 @@ PlayOasis is a website that provides information about games rating and upcoming
 To get started with this project, follow these steps:
 
 1. Clone this repository to your local machine.
-2. Run `npm install` to install the required dependencies.
-3. Get a RAWG API key at https://rawg.io/apidocs. You'll have to create an account first.
-4. Add the API key to **.env** check env.example for reference.
-5. Run `npm run dev` to start the web server.
+2. Install the required dependencies.
+   ```bash
+   npm install
+   ```
+4. Get a RAWG API key at https://rawg.io/apidocs. You'll have to create an account first.
+5. Add the API key to **.env** check env.example for reference.
+6. Start the web server.
+```bash
+ npm run dev 
+ ```
 
 ## Live Link
 [Live Link](https://play-oasis.vercel.app/)
